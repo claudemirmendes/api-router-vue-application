@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  init_hour: MyString
+  end_hour: MyString
+  payment_type: MyString
+  patient_id: MyString
+
+two:
+  date: MyString
+  init_hour: MyString
+  end_hour: MyString
+  payment_type: MyString
+  patient_id: MyString
