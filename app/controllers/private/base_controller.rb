@@ -9,7 +9,7 @@ class Private::BaseController < ApplicationController
     # end
 
     def validate_token
-        teste_json = {"teste": "teste"}
+        teste_json = {"teste": "te1111ste"}
         render json: teste_json
     end
 end
