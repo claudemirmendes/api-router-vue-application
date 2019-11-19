@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     match 'users/index', to: 'users#index', via: [:get, :options]
   end
   namespace :public do
-    match 'users/index', to: 'users#index', via: [:get, :options]
+    match 'users/login', to: 'users#login', via: [:post, :options]
   end
 end
