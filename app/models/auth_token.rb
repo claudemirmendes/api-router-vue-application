@@ -3,13 +3,13 @@
 class AuthToken < ApplicationRecord
   def self.generate_token(user)
     auth_token = AuthToken.where(user_id: user.id)
-    if auth_token.empty?
+    if auth_token.nil?
       hash_token = SecureRandom.uuid
       date = DateTime.now + 1.year
       auth_token = AuthToken.create(token: hash_token, user_id: user.id, expired_date: date)
       return auth_token.token
     else
-      return auth_token unless auth_token.empty?
+      return auth_token.first.token unless auth_token.nil?
     end
   end
 end
