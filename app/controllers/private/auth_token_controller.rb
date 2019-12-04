@@ -1,2 +1,2 @@
-class Private::AuthTokenController < ApplicationController
+class Private::AuthTokenController < Private::BaseController
 end
