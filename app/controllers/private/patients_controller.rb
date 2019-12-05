@@ -1,7 +1,11 @@
 class Private::PatientsController < Private::BaseController
   def create
     patient = Patient.create(patient_params)
-    render json: patient
+    if(patient)
+      render json: patient
+    else
+      render json: {"message": "Houve um erro!", "error": 500}
+    end
   end
 
   def update
@@ -12,6 +16,6 @@ class Private::PatientsController < Private::BaseController
 
   private
   def patient_params
-    params.permit(:nome, :user_id)
+    params.permit(:nome, :user_id, :email)
   end
 end
